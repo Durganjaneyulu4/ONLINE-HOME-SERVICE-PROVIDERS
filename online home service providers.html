@@ -1,0 +1,2267 @@
+CODING:
+homepage.php :
+<?php
+include_once("connection.php");
+?>
+<!DOCTYPE html>
+<html>
+<head><title>HOME PAGE</title></head>
+<style type="text/css">
+body{
+background: url(home2.jpg);
+background-size: cover;
+}
+#rotate:hover{
+cursor: pointer;
+transform: rotate(45deg);
+}
+</style>
+<link rel="stylesheet" type="text/css" href="style1.css">
+27
+<body>
+<i>
+<script>
+function choose_signup()
+{
+window.location.href="register.html";
+}
+function choose_workwithus()
+{
+window.location.href="workwithus.html";
+}
+function choose_forgot()
+{
+window.location.href="forgotpassword.php";
+}
+function choose_feedback()
+{
+window.location.href="view_feedback.php";
+}
+</script>
+<div class="box">
+<table style =" font-size:16pt" align="center" width="100%" height="100%" >
+<tr>
+<td style="color:black"><h1 align="center"><u>ONLINE HOME SERVICE
+PROVIDERS</u></td></h1>
+</tr>
+<tr>
+<td style="color:black" align="center"><b>Making homes better!</b><br></td>
+</tr>
+</table>
+</div>
+<div class="boxtwo" style="border:solid 1px black;border-radius: 10px; width:74%; height:530px;
+margin-left:13%;margin-top:5px;background-color:white">
+<table border="1" width="100%" height="100%" align="center" margin-top="10px";>
+<tr>
+<th><a href="cleaning.php"><input name="image1" type="image" src="hkeep.jpg" id="rotate"
+height="70" width="70"><br>CLEANING</a> </th>
+<th><a href="carpentary.php"><input name="image2" type="image" src="carp.jpg" id="rotate"
+height="70" width="70"><br>CARPENTRY</a></th>
+<th><a href="plumbing.php"><input name="image3" type="image" src="plumb.jpg" id="rotate"
+height="70" width="70"><br>PLUMBING</a></th>
+<th><a href="electrician.php"><input name="image4" type="image" src="elec.jpg" id="rotate"
+height="70" width="70"><br>ELECTRICIAN</a></th>
+</tr>
+<tr >
+<td colspan="4" ><center>
+<fieldset align="center" style=" background:rgba(0,0,0,0.38);color:black;" class="five">
+<h3 style="color:white;text-align:center;padding-top:1px;padding-bottom:
+1px;background:#660000;border-radius:10px;margin-top:-13px;margin-left:-12px;height:30px">WELC
+OME</h3>
+<form name="f3" action="login.php" method="POST">
+<table style="font-size:16pt;width:20px;height:45px;margin-right:100px; align:center">
+28
+<tr>
+<td><label style="color:white">E-MAIL ID</label></td>
+<td><input type="email" name="email" id="email" placeholder="email" required="true"></td>
+</tr>
+<tr>
+<td><label style="color:white">Password</label></td>
+<td><input type="password" name="psw" placeholder="password" id="psw"
+required="true"></td>
+</tr>
+<tr>
+<td align="center" style="margin-left:100px" background-color: #eb2e55;>
+<input type="submit" value="LOGIN" name="LOGIN" id="submit" >
+</td>
+</tr>
+</form>
+<tr>
+<td align="center" style="margin-left:100px" background-color: #eb2e55;>
+<input type="submit" value="FORGOT PASSWORD!" name="forgot"
+onclick="choose_forgot()" >
+</td>
+</tr>
+<tr>
+<td align="center" style="margin-left:200px" background-color: #eb2e55;>
+<input type="submit" name="SIGNUP" value="SIGNUP" onclick="choose_signup()">
+</td>
+</tr>
+<tr>
+<td align="center" style="margin-left:200px"background-color: #eb2e55;>
+<input type="submit" name="WORK WITH US" value="WORKWITHUS"
+onclick="choose_workwithus()">
+</td>
+</tr>
+<tr>
+<td align="center" style="margin-left:200px"background-color: #eb2e55;>
+<input type="submit" name="FEEDBACK" value="REVIEW OF CUSTOMERS"
+onclick="choose_feedback()">
+</td>
+</tr>
+<tr>
+<td><br></td>
+</tr>
+</table>
+</fieldset></center>
+</td>
+</tr>
+</table>
+</div >
+</form>
+29
+<div class="boxthree" style="background-color:lavender; border:solid 1px black;border-radius: 10px;
+width:73.5%; height:60px; margin-left:13%; margin-top:15px" >
+<h6 style="line-height:1px;font-size:12pt"><center>contact
+us:0891-238989,8985129566</center></h6>
+</div>
+</i>
+</body>
+</html>
+adminpage.php :
+<?php
+include_once("connection.php");
+?>
+<!DOCTYPE html>
+<html>
+<head><title>ADMIN PAGE</title></head>
+<style type="text/css">
+body{
+background: url(home2.jpg);
+background-size: cover;
+}
+#rotate:hover{
+cursor: pointer;
+transform: rotate(45deg);
+}
+</style>
+<link rel="stylesheet" type="text/css" href="style1.css">
+<body>
+<i>
+<script>
+function choose_update()
+{
+window.location.href="update_sp.php";
+}
+function choose_sp()
+{
+window.location.href="view_clean.php";
+}
+</script>
+30
+<div class="box">
+<table style =" font-size:16pt" align="center" width="100%" height="100%" >
+<tr>
+<td style="color:black"><h1 align="center"><u>ONLINE HOME SERVICE
+PROVIDERS</u></td></h1>
+</tr>
+<tr>
+<td style="color:black" align="center"><b>Making homes better!</b><br></td>
+</tr>
+</table>
+</div>
+<div class="boxtwo" style="border:solid 1px black;border-radius: 10px; width:74%;
+height:470px; margin-left:13%;margin-top:5px;background-color:white">
+<table border="1" width="100%" height="100%" align="center" margin-top="10px";>
+<tr>
+<th><a href="cleaning.php"><input name="image1" type="image" src="hkeep.jpg" id="rotate"
+height="70" width="70"><br>CLEANING</a> </th>
+<th><a href="carpentary.php"><input name="image2" type="image" src="carp.jpg" id="rotate"
+height="70" width="70"><br>CARPENTRY</a></th>
+<th><a href="plumbing.php"><input name="image3" type="image" src="plumb.jpg" id="rotate"
+height="70" width="70"><br>PLUMBING</a></th>
+<th><a href="electrician.php"><input name="image4" type="image" src="elec.jpg" id="rotate"
+height="70" width="70"><br>ELECTRICIAN</a></th>
+</tr>
+<tr >
+<td colspan="4" ><center>
+<fieldset align="center" style=" background:rgba(0,0,0,0.38);color:black;" class="five">
+<table style="font-size:16pt;width:20px;height:35px;margin-right:500px; align:center">
+<tr>
+<td align="center" style="margin-left:100px" background-color: #eb2e55;>
+<input type="submit" name="UPDATE SERVICE PROVIDERS" value="UPDATE
+SERVICE PROVIDERS" id="UPDATE SERVICE PROVIDERS" onclick="choose_update()"
+></td>
+</tr>
+<tr>
+<td align="center" style="margin-left:100px" background-color: #eb2e55;>
+<input type="submit" name="ASSIGN SERVICE PROVIDERS" value="ASSIGN
+SERVICE PROVIDERS" id="ASSIGN SERVICE PROVIDERS" onclick="choose_sp()" ></td>
+</tr>
+<tr>
+<td><br></td>
+</tr>
+31
+</table>
+</fieldset>
+<h3 style="margin-left:160px" background-color: #eb2e55; ><a href="logout.php">Logout
+here</a> </h3>
+</center>
+</td>
+</tr>
+</table>
+</div >
+<div class="boxthree" style="background-color:lavender; border:solid 1px black;border-radius:
+10px; width:73.5%; height:60px; margin-left:13%; margin-top:15px" >
+<h6 style="line-height:1px;font-size:12pt"><center>contact
+us:0891-238989,8985129566</center></h6>
+</div>
+</i>
+</body>
+</html>
+carpentry.php :
+<?php
+include_once('connection.php');
+?>
+<!DOCTYPE html>
+<html>
+<head> <title>CARPENTER</title>
+<style type="text/css">
+body{
+background: url(home2.jpg);
+background-size: cover;
+}
+.table{
+border-collapse:collapse;
+box-shadow: 5px 10px;
+background-color:#E8DAEF ;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body><i>
+<div class="box">
+<table style =" font-size:16pt" align="center" width="100%" height="100%" >
+<tr>
+<td style="color:black"><h1 align="center"><u>ONLINE HOME SERVICE
+PROVIDERS</u></td></h1>
+</tr>
+<tr>
+<td style="color:black" align="center"><b>Making homes better!</b><br></td>
+</tr>
+</table>
+</div>
+<form method="post" action="">
+<div class="boxtwo" style="border:solid 1px black;border-radius: 10px; width:74%; height:370px;
+margin-left:13%;margin-top:5px;background-color:white;overflow:scroll;">
+<center>
+<h1>OUR CARPENTARY SERVICE</h1></center>
+<h2 style=margin-left:2%>ABOUT:</h2>
+<img style=" margin-left:9%" src="carp1.jpg" width="250" height="180" > &emsp;
+<img src="carp2.jpg" width="250" height="180" >&emsp;
+<img src="carp3.jpg" width="250" height="180">
+<p style=" margin-left:3%;font-size:16pt"> &emsp; We are here to provide you with the best
+carpenter services at standardized prices.Professionals associated with us are there to provide you with
+basic carpentry services. This generally includes door repairs, making of new furniture, construction of
+door and window frames in new houses, construction of wooden slabs, dismantling or mantling of
+furniture and so on.Given that the professional is booked, the price is calculated on the basis of working
+hours starting from Rs.1000
+</p>
+<table class="table" align="centre" border="1px" style="width:600px;
+line-height:40px;margin-left:20%" >
+<tr>
+<th colspan="5"><h2>OUR CARPENTERS</h2></th>
+</tr>
+<th> name </th>
+<th> Address </th>
+<th> Phone no </th>
+<th> experience </th>
+<?php
+$query="SELECT * FROM serviceproviders WHERE department = 'cp' ";
+$result=mysqli_query($con,$query);
+while($row=mysqli_fetch_array($result))
+{
+?>
+<tr>
+<td><?php echo $row['name1']; ?></td>
+<td><?php echo $row['address']; ?></td>
+<td><?php echo $row['phone']; ?></td>
+<td><?php echo $row['years']; ?></td>
+</tr>
+<?php
+}
+?>
+</table><br><br>
+</div >
+</form>
+<div class="boxthree" style="background-color:lavender; border:solid 1px black;border-radius: 10px;
+width:73.5%; height:60px; margin-left:13%; margin-top:15px" >
+<h6 style="line-height:1px;font-size:12pt"><center>contact
+us:0891-238989,8985129566</center></h6>
+</div>
+</body>
+</i>
+</html>
+cleaning.php :
+<?php
+include_once('connection.php');
+?>
+<!DOCTYPE html>
+<html>
+<head> <title>CLEANING</title>
+<style type="text/css">
+body{
+background: url(home2.jpg);
+background-size: cover;
+}
+.table{
+border-collapse:collapse;
+box-shadow: 5px 10px;
+background-color:#E8DAEF ;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<i>
+<div class="box">
+<table style =" font-size:16pt" align="center" width="100%" height="100%" >
+<tr>
+<td style="color:black"><h1 align="center"><u>ONLINE HOME SERVICE
+PROVIDERS</u></td></h1>
+</tr>
+<tr>
+<td style="color:black" align="center"><b>Making homes better!</b><br></td>
+</tr>
+</table>
+</div>
+<form method="post" action="">
+<div class="boxtwo" style="border:solid 1px black;border-radius: 10px; width:74%; height:370px;
+margin-left:13%;margin-top:5px;background-color:white;overflow:scroll;">
+<center>
+<h1>OUR HOME CLEANING SERVICE</h1></center>
+<h2 style=margin-left:2%>ABOUT:</h2>
+<img style=" margin-left:9%" src="clean1.jpg" > &emsp;
+<img src="clean2.jpg" >&emsp;
+<img src="clean3.jpg">
+<p style=" margin-left:3%;font-size:16pt"> &emsp; In modern times when the lives are busier
+than ever,many people are finding it hard to maintain the level of cleanliness they want in their home.A
+simple solution to this problem is availing professional home cleaning services.Our service includes
+Room cleaning,Sofa and carpet cleaning,Balcony Deep cleaning,Kitchen cleaning,Bathroom cleaning
+and other miscellaneous things that come under .
+Given that the professional is booked, the price is calculated on the basis of size of home/room starting
+from Rs.3000.
+</p>
+<table class="table" align="centre" border="1px" style="width:600px;
+line-height:40px;margin-left:20%" >
+<tr>
+<th colspan="5"><h2>OUR HOUSE KEEPERS</h2></th>
+</tr>
+<th> name </th>
+<th> Address </th>
+<th> Phone no </th>
+<th> experience </th>
+<?php
+$query="SELECT * FROM serviceproviders WHERE department = 'hk' ";
+$result=mysqli_query($con,$query);
+while($row=mysqli_fetch_array($result))
+{
+?>
+<tr>
+<td><?php echo $row['name1']; ?></td>
+<td><?php echo $row['address']; ?></td>
+<td><?php echo $row['phone']; ?></td>
+<td><?php echo $row['years']; ?></td>
+</tr>
+<?php
+}
+?>
+</table>
+<br><br>
+35
+</div >
+</div >
+</form>
+<div class="boxthree" style="background-color:lavender; border:solid 1px black;border-radius: 10px;
+width:73.5%; height:60px; margin-left:13%; margin-top:15px" >
+<h6 style="line-height:1px;font-size:12pt"><center>contact
+us:0891-238989,8985129566</center></h6>
+</div>
+</body>
+</i>
+</html>
+connection.php :
+<?php
+$host="localhost";
+$user="root";
+$password="";
+$dbname="project";
+$con=mysqli_connect($host,$user,$password,$dbname);
+if(!$con){
+die("Error: Cannot connect to database");
+}
+?>
+electrician.php :
+<?php
+include_once('connection.php');
+?>
+<!DOCTYPE html>
+<html>
+<head> <title>ELECTRICAL</title>
+<style type="text/css">
+body{
+background: url(home2.jpg);
+background-size: cover;
+}
+.table{
+border-collapse:collapse;
+box-shadow: 5px 10px;
+background-color:#E8DAEF ;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<i>
+<div class="box">
+<table style =" font-size:16pt" align="center" width="100%" height="100%" >
+<tr>
+<td style="color:black"><h1 align="center"><u>ONLINE HOME SERVICE
+PROVIDERS</u></td></h1>
+</tr>
+<tr>
+<td style="color:black" align="center"><b>Making homes better!</b><br></td>
+</tr>
+</table>
+</div>
+<form method="post" action="">
+<div class="boxtwo" style="border:solid 1px black;border-radius: 10px; width:74%; height:370px;
+margin-left:13%;margin-top:5px;background-color:white;overflow:scroll;">
+<center>
+<h1>OUR ELECTRICAL SERVICE</h1></center>
+<h2 style=margin-left:2%>ABOUT:</h2>
+<img style=" margin-left:9%" src="elec1.jpg" > &emsp;
+<img src="elec2.jpg" >&emsp;
+<img src="elec3.jpg">
+<p style=" margin-left:3%;font-size:16pt"> &emsp; Even searching for a reliable electrician
+becomes a task.Our professionals provide you with basic electrical
+repairs such as fixing the wiring system or fans, switches, fuses, fancy light or meters. Whether it is a
+small
+repair or an appliance installation, we have you covered. Even shifting to a new space will be stress-free
+with
+our expert to take care of all your electrical needs while keeping your safety in mind. Given that the
+professional is booked, the price is calculated on the basis of working hours starting from Rs.500
+</p>
+<table class="table" align="centre" border="1px" style="width:600px;
+line-height:40px;margin-left:20%" >
+<tr>
+<th colspan="5"><h2>OUR ELECTRICIANS</h2></th>
+</tr>
+<th> name </th>
+<th> Address </th>
+<th> Phone no </th>
+<th> experience </th>
+<?php
+$query="SELECT * FROM serviceproviders WHERE department = 'el' ";
+$result=mysqli_query($con,$query);
+while($row=mysqli_fetch_array($result))
+{
+37
+?>
+<tr>
+<td><?php echo $row['name1']; ?></td>
+<td><?php echo $row['address']; ?></td>
+<td><?php echo $row['phone']; ?></td>
+<td><?php echo $row['years']; ?></td>
+</tr>
+<?php
+}
+?>
+</table>
+<br><br>
+</div >
+</form>
+<div class="boxthree" style="background-color:lavender; border:solid 1px black;border-radius: 10px;
+width:73.5%; height:60px; margin-left:13%; margin-top:15px" >
+<h6 style="line-height:1px;font-size:12pt"><center>contact
+us:0891-238989,8985129566</center></h6>
+</div>
+</body>
+</i>
+</html>
+feedback.php :
+<?php
+include_once('connection.php');
+if(isset($_POST['submit'])){
+$review=$_POST['comment'];
+$Insert="INSERT into feedback VALUES('0','$review')";
+if(mysqli_query($con,$Insert)){
+echo "<script>window.location='selection.php'</script>";
+}
+else{
+echo"error:Could not execute $Insert.".mysqli_error($con);
+}
+}
+?>
+<!DOCTYPE html>
+<html>
+<head> <title>THANK YOU</title>
+</head>
+<meta charset="utf-8">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+38
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+.checked {
+color: orange;
+}
+</style>
+<body><i>
+<div class="box">
+<table style =" font-size:16pt" align="center" width="100%" height="100%" >
+<tr>
+<td style="color:black"><h1 align="center"><u>ONLINE HOME SERVICE
+PROVIDERS</u></td></h1>
+</tr>
+<tr>
+<td style="color:black" align="center"><b>Making homes better!</b><br></td>
+</tr>
+</table>
+</div>
+<div class="boxtwo" style="border:solid 1px black;border-radius: 10px; width:74%; height:340px;
+margin-left:13%;margin-top:5px;background-color:white">
+<br>
+<fieldset align="center" style="background:rgba(0,0,0,0.38);color:black;width:50%;" class="five">
+<h4 style="color:white;text-align:center;padding-top:1px;padding-bottom:
+1px;background:#660000;border-radius:10px;margin-top:-13px;margin-left:-12px;height:30px">How
+was your experience ?</h4>
+<form name="f7" action="feedback.php" method="POST">
+<textarea style="margin-top:25px;margin-left:85px;" name="comment" rows="3" cols="50"
+id="comment" placeholder="Enter your review"></textarea>
+<br>
+<input type="submit" name="submit" value="submit" style="margin-top:15px;margin-left:235px;
+height:30px;background:#660000;color:#FFFFFF; border-radius:18px;" class="btn btn-lg btn-success">
+</fieldset>
+<h3 style="margin-left:160px" background-color: #eb2e55; ><a href="logout.php">Logout here</a>
+</h3>
+<div class="boxthree" style="background-color:lavender; border:solid 1px black;border-radius: 10px;
+width:100%; height:60px; margin-top:85px" >
+<h6 style="line-height:1px;font-size:12pt"><center>contact
+us:0891-238989,8985129566</center></h6>
+</div>
+</i> </body>
+</html>
+forgotpassword.php :
+39
+<?php
+include_once('connection.php');
+if(isset($_POST['reset'])) {
+$email= $_POST['email'];
+$password=$_POST['password'];
+$result=mysqli_query($con,"SELECT * FROM admindetails WHERE email = '$email'") or
+die(mysqli_error());
+$res=mysqli_fetch_array($result);
+$query = mysqli_query($con, "SELECT * FROM registerform WHERE email = '$email' ") or
+die(mysqli_error());
+$fetch = mysqli_fetch_array($query);
+$services = mysqli_query($con, "SELECT * FROM workwithus WHERE email = '$email'
+") or die(mysqli_error());
+$pros = mysqli_fetch_array($services);
+$service = mysqli_query($con, "SELECT * FROM serviceproviders WHERE email =
+'$email' ") or die(mysqli_error());
+$pro = mysqli_fetch_array($service);
+if(is_array($res)){ // If EMAIL is registered
+$query="UPDATE admindetails SET password='$password' WHERE email='$email' ";
+mysqli_query($con,$query);
+echo "<script>alert('Your Password has been set.. You can login now !')</script>";
+}
+else if(is_array($fetch)){ // If EMAIL is registered
+$query="UPDATE registerform SET psw='$password' WHERE email='$email' ";
+mysqli_query($con,$query);
+echo "<script>alert('Your Password has been set.. You can login now !')</script>";
+}
+else if(is_array($pros)){ // If EMAIL is registered
+$query="UPDATE workwithus SET psw='$password' WHERE email='$email' ";
+mysqli_query($con,$query);
+echo "<script>alert('Your Password has been set.. You can login now !')</script>";
+}
+else if(is_array($pro)){ // If EMAIL is registered
+$query="UPDATE serviceproviders SET psw='$password' WHERE email='$email' ";
+mysqli_query($con,$query);
+echo "<script>alert('Your Password has been set.. You can login now !')</script>";
+}
+else{
+echo "<script>alert('Your Email is not registered...Please Register !')</script>";
+}
+echo "<script>window.location='homepage.php'</script>";
+40
+}
+?>
+<!DOCTYPE html>
+<html>
+<head> <title>RESET PASSWORD</title>
+<style type="text/css">
+body{
+background: url(home2.jpg);
+background-size: cover;
+}
+.table{
+border-collapse:collapse;
+box-shadow: 5px 10px;
+background-color:#E8DAEF ;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<i>
+<div class="box">
+<table style =" font-size:16pt" align="center" width="100%" height="100%" >
+<tr>
+<td style="color:black"><h1 align="center"><b>ONLINE HOME SERVICE
+PROVIDERS</b></td></h1>
+</tr>
+<tr>
+<td style="color:black" align="center"><b>Making homes better!</b><br></td>
+</tr>
+</table>
+</div>
+<form action="forgotpassword.php" method="post" enctype="multipart/form-data">
+<div class="boxtwo" style="border:solid 1px black;border-radius: 10px; width:74%; height:370px;
+margin-left:13%;margin-top:5px;background-color:white;overflow:scroll;">
+<fieldset align="center" style=" background:rgba(0,0,0,0.38);color:black;" class="five">
+<h3 style="color:white;text-align:center;padding-top:1px;padding-bottom:
+1px;background:#660000;border-radius:10px;margin-top:-13px;margin-left:-12px;height:30px">RESET
+PASSWORD</h3>
+<label style="font-size: 20px" > Email ID : </label>
+<input type="email" style="font-size: 15px" name="email" placeholder="enter the registered
+email"></td>
+<br><br>
+<label style="font-size: 20px"> New Password : </label>
+41
+<input type="password" name="password" style="font-size: 15px" placeholder="enter the new
+password"></td>
+<br><br>
+<button type="submit" name="reset" style="color:white;font-size: 20px;font-weight: 10px
+;background:#660000 ;">reset</button>
+</form>
+</fieldset>
+</div >
+<div class="boxthree" style="background-color:lavender; border:solid 1px black;border-radius: 10px;
+width:73.5%; height:60px; margin-left:13%; margin-top:15px" >
+<h6 style="line-height:1px;font-size:12pt"><center>contact
+us:0891-238989,8985129566</center></h6>
+</div>
+</body>
+</i>
+</html>
+login.php :
+<?php
+include_once('connection.php');
+$email= $_POST['email'];
+$psw = $_POST['psw'];
+$result=mysqli_query($con,"SELECT * FROM admindetails WHERE email = '$email' AND
+password = '$psw'") or die(mysqli_error());
+$res=mysqli_fetch_array($result);
+$query = mysqli_query($con, "SELECT * FROM registerform WHERE email = '$email' AND
+psw = '$psw'") or die(mysqli_error());
+$fetch = mysqli_fetch_array($query);
+$service = mysqli_query($con, "SELECT * FROM serviceproviders WHERE email =
+'$email' AND psw = '$psw'") or die(mysqli_error());
+$pro = mysqli_fetch_array($service);
+session_start();
+if(is_array($res)){ //FOR ADMIN LOGIN
+$_SESSION['email']=$email;
+echo "<script>alert('Admin,your are logged in successfully!')</script>";
+echo "<script>window.location='adminpage.php'</script>";
+}
+else if(is_array($fetch)){ //FOR CUSTOMER
+$_SESSION['email']=$email;
+echo "LOGIN DONE";
+echo "<script>alert(' Customer you are logged in Successfully!')</script>";
+echo "<script>window.location='selection.php'</script>";
+42
+}
+else if(is_array($pro)){ //FOR SERVICE PROVIDER
+$_SESSION['email']=$email;
+echo "<script>alert(' Service provider you are Logged in
+Successfully!')</script>";
+echo "<script>window.location='sp_home.php'</script>";
+}
+else{
+echo "<script>alert('Invalid username or password')</script>";
+echo "<script>window.location='homepage.php'</script>";
+}
+?>
+logout.php :
+<?php
+session_unset();
+session_destroy();
+header("location: homepage.php");
+exit();
+?>
+plumbing.php :
+<?php
+include_once('connection.php');
+?>
+<!DOCTYPE html>
+<html>
+<head> <title>PLUMBING</title>
+<style type="text/css">
+body{
+background: url(home2.jpg);
+background-size: cover;
+}
+.table{
+border-collapse:collapse;
+box-shadow: 5px 10px;
+background-color:#E8DAEF ;
+}
+</style>
+43
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<i>
+<div class="box">
+<table style =" font-size:16pt" align="center" width="100%" height="100%" >
+<tr>
+<td style="color:black"><h1 align="center"><b>ONLINE HOME SERVICE
+PROVIDERS</b></td></h1>
+</tr>
+<tr>
+<td style="color:black" align="center"><b>Making homes better!</b><br></td>
+</tr>
+</table>
+</div>
+<form method="post" action="">
+<div class="boxtwo" style="border:solid 1px black;border-radius: 10px; width:74%; height:370px;
+margin-left:13%;margin-top:5px;background-color:white;overflow:scroll;">
+<center>
+<h1>OUR PLUMBING SERVICE</h1></center>
+<h2 style=margin-left:2%><i>ABOUT:</i></h2>
+<img style=" margin-left:9%" src="plumb0.jpg" > &emsp;
+<img src="plumb1.jpg" >&emsp;
+<img src="plumb3.jpg">
+<p style=" margin-left:3%;font-size:16pt">&emsp; A well-functioning household is essential for
+effectiveness in life.Our services vary from fixes to new fittings, cleaning and other things that come
+under the expertise of a plumber.
+Given that the professional is booked, the price is calculated on the basis of working hours starting from
+Rs.1000
+</p>
+<table class="table" align="centre" border="1px" style="width:600px;
+line-height:40px;margin-left:20%">
+<tr>
+<th colspan="5"><h2>OUR PLUMBERS</h2></th>
+</tr>
+<th> name </th>
+<th> Address </th>
+<th> Phone no </th>
+<th> experience </th>
+<?php
+$query="SELECT * FROM serviceproviders WHERE department = 'pl' ";
+$result=mysqli_query($con,$query);
+while($row=mysqli_fetch_array($result))
+{
+?>
+<tr>
+<td><?php echo $row['name1']; ?></td>
+<td><?php echo $row['address']; ?></td>
+44
+<td><?php echo $row['phone']; ?></td>
+<td><?php echo $row['years']; ?></td>
+</tr>
+<?php
+}
+?>
+</table>
+<br>
+<br>
+</div >
+</form>
+<div class="boxthree" style="background-color:lavender; border:solid 1px black;border-radius: 10px;
+width:73.5%; height:60px; margin-left:13%; margin-top:15px" >
+<h6 style="line-height:1px;font-size:12pt"><center>contact
+us:0891-238989,8985129566</center></h6>
+</div>
+</body>
+</i>
+</html>
+register.html :
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+body{
+background: url(home2.jpg);
+background-size: cover;
+}
+.box{
+width:74%;
+height:150px;
+border:solid 1px black;
+background-image: url("img2.jpg");
+background-size: cover;
+margin-left:13%;
+opacity: .9;
+border-radius:12px;
+}
+.title h2{
+background:#660000;
+border:none;
+margin-left:-10px;
+margin-top: -05px;
+padding-top:3px;
+padding-bottom: 2px;
+padding-left:120px;
+border-radius:15px;
+45
+width:77.2%;
+color:white;
+}
+.one{
+margin-top: 1.5%;
+margin-left:15%;
+margin-right:30%;
+opacity: .9;
+height:320px;
+background:rgba(0,0,0,0.5);
+}
+.boxtwo{
+background-image: url("img2.jpg");
+background-size: cover;
+border-radius:12px;
+}
+.boxtwo input[type="submit"]
+{
+font-size:25px;
+text-align:center;
+border:none;
+height:40px;
+margin-left:60% ;
+margin-top: 10px;
+background:#660000;
+color:#FFFFFF;
+border-radius:18px;
+}
+.center {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left:150% ;
+}
+</style>
+<head><title>REGISTRATION</title></head>
+<body><i>
+<div class="box">
+<table style =" font-size:16pt" align="center" width="100%" height="100%" >
+<tr>
+<td style="color:black"><h1 align="center"><u>ONLINE HOME SERVICE
+PROVIDERS</u></td></h1>
+</tr>
+<tr>
+<td style="color:black" align="center"><b>Making homes better!</b><br></td>
+</tr>
+</table>
+46
+</div>
+<div class="boxtwo" style="border:solid 1px black;border-radius: 10px; width:74%; height:480px;
+margin-left:13%;margin-top:10px;background-color:black">
+<fieldset align="center" style=" border-radius:10px;
+background:rgba(0,0,0,0.38);color:black;height:430px;" class="one">
+<div class="title">
+<h2 style="color:white;text-align:center;padding-top:1px;padding-bottom:
+1px;background:#660000;border-radius:10px;margin-top:-7px;margin-left:-5px;height:30px;width:500p
+x;">YOUR DETAILS</h2>
+</div>
+<form name="f1" action="registration.php" method="POST">
+<table align="center" style="color:black;font-size:13pt;">
+<tr>
+<td>NAME:</td>
+<td ><input type="text" required="required" name="name" id="name" /></td>
+</tr>
+<tr>
+<td>CITY:</td>
+<td><select required="required" name="address" id="address">
+<option value="vizag">VISAKHAPATNAM</option>
+</select></td>
+</tr>
+<tr>
+<td>GENDER:</td>
+<td>
+<input type="radio" name="gender" id="male" value="m" > Male
+<input type="radio" name="gender" id="female" value="f" > Female</td>
+</tr>
+<tr>
+<td>PHONE NO:</td>
+<td><input type="number" id="phone" name="phone" pattern="[0-9]{10}" required="required"></td>
+</tr>
+<tr>
+<td>E-MAIL ID:</td>
+<td><input type="email" name="email" id= "email" required="required" /></td>
+</tr>
+<tr>
+<td>PASSWORD:</td>
+<td><input type="password" id="psw" name="psw" required="required">
+</td></tr>
+<tr>
+<td><input type="submit" name="REGISTER" value="REGISTER" id="REGISTER"
+class="button"></td>
+47
+</tr>
+</table>
+</form>
+</fieldset>
+</div>
+<div class="boxthree" style="background-color:lavender; border:solid 1px black;border-radius: 10px;
+width:74%; height:60px; margin-left:13%; margin-top:15px" >
+<h6 style="line-height:1px;font-size:12pt"><center>contact
+us:0891-238989,8985129566</center></h6>
+</div>
+</i>
+</body>
+</html>
+registration.php :
+<?php
+include_once('connection.php');
+$name=$_POST['name'];
+$address=$_POST['address'];
+$gender=$_POST['gender'];
+$phone=$_POST['phone'];
+$email=$_POST['email'];
+$psw=$_POST['psw'];
+$Insert="INSERT into registerform VALUES('$name','$address','$gender','$phone','$email','$psw')";
+if(mysqli_query($con,$Insert)){
+echo "<script>alert(' Customer you are registered Successfully!')</script>";
+echo "<script>window.location='selection.php'</script>";
+}
+else{
+echo"error:Could not execute $Insert.".mysqli_error($con);
+echo "<script>alert('Email already exists please login to continue...')</script>";
+echo "<script>window.location='register.html'</script>";
+}
+?>
+reqbooking.php :
+<?php
+if(isset($_POST['BOOKNOW'])){
+48
+session_start();
+include_once('connection.php');
+$service=$_POST['service'];
+$address=$_POST['address'];
+$phone=$_POST['phone'];
+$email=$_POST['email'];
+//$sql="select * from registerform where (email='$email');";
+//$res=mysqli_query($con,$sql);
+$Insert="INSERT INTO reqbookings (booking_id,service,address,email,phone,provider) VALUES
+('0','$service','$address','$email','$phone','')";
+// $query=mysqli_query($con,"INSERT INTO reqbookings (name,phone) SELECT name,phone
+FROM registerform WHERE email ='$email' ");
+if(mysqli_query($con,$Insert)){
+echo "<h1>Successfully booked</h1>";
+echo "<script>window.location='thank_cum.html'</script>";
+}
+else{
+echo"error:Could not execute $Insert.".mysqli_error($con);
+//echo "<script>window.location='selection.php'</script>";
+}
+}
+?>
+selection.php :
+<?php
+include_once("connection.php");
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+body{
+background: url(home2.jpg);
+background-size: cover;
+}
+.box{
+width:74%;
+height:150px;
+border:solid 1px black;
+background-image: url("img2.jpg");
+<body><i>
+<script>
+function find(){
+window.location.href="viewbookings.php";
+}
+function finds(){
+window.location.href="feedback.php";
+}
+</script>
+<div class="box">
+<table style =" font-size:16pt" align="center" width="100%" height="100%" >
+<tr>
+<td style="color:black"><h1 align="center"><u>ONLINE HOME SERVICE
+PROVIDERS</u></td></h1>
+</tr>
+<tr>
+<td style="color:black" align="center"><b>Making homes better!</b><br></td>
+</tr>
+</table>
+</div>
+<div class="boxtwo" style="border:solid 1px black;border-radius: 10px; width:74%; height:500px;
+margin-left:13%;margin-top:10px;background-color:black">
+<fieldset align="center" style=" border-radius:10px;
+background:rgba(0,0,0,0.38);color:black;height:400px;" class="one">
+<div class="title">
+<h2 style="color:white;text-align:center;padding-top:1px;padding-bottom:
+1px;background:#660000;border-radius:10px;margin-top:-7px;margin-left:-3px;height:30px;width:500p
+x;">PLEASE SELECT</h2>
+</div>
+<td style="margin-left:50px" background-color: #eb2e55;><input type="submit" name="FEEDBACK"
+value="FEEDBACK" onclick="finds()"></td>
+<tr>
+<td style="margin-left:100px" background-color: #eb2e55;><input type="submit"
+name="CHECKBOOKINGS" value="CHECKBOOKINGS" onclick="find()"></td>
+</tr><br><br>
+<form name="f5" action="reqbooking.php" method="POST">
+<table align="center" style="color:black;font-size:13pt;">
+<tr>
+<td>SERVICE REQUIRED:</td>
+<td><select required name="service" id="service">
+<option value="plu">Plumbing</option>
+<option value="hkp">House keeping</option>
+<option value="crp">carpenter</option>
+51
+<option value="ele">Electrician</option>
+</select></td>
+</tr>
+<tr>
+<td>ADDRESS:</td>
+<td>
+<textarea rows="5" cols="50" name="address" value="address" id="address"
+maxlength="30"></textarea> </td>
+</tr>
+<tr>
+<td>EMAIL ID: </td>
+<td>
+<input type="email" name="email" id="email"></td>
+</tr>
+<tr>
+<td>PHONE NO: </td>
+<td>
+<input type="number" name="phone" id="phone"></td>
+</tr>
+<tr>
+<td align="center" style="margin-left:100px" background-color: #eb2e55;><input type="submit"
+name="BOOKNOW" value="BOOKNOW"></td>
+</tr>
+</table>
+</form>
+</fieldset>
+<h3 style="margin-left:160px" background-color: #eb2e55; ><a href="logout.php">Logout here</a>
+</h3>
+</div>
+<div class="boxthree" style="background-color:lavender; border:solid 1px black;border-radius: 10px;
+width:74%; height:60px; margin-left:13%; margin-top:15px" >
+<h6 style="line-height:1px;font-size:12pt"><center>contact
+us:0891-238989,8985129566</center></h6>
+</div>
+</i>
+</body>
+</html>
+52
+serviceproviders.php :
+<?php
+include_once('connection.php');
+$name=$_POST['name1'];
+$address=$_POST['address'];
+// $gender=$_POST['gender'];
+$phone=$_POST['phone'];
+$department=$_POST['department'];
+$file = $_FILES['myfile'];
+$filename=$file['name'];
+$filepath=$file['tmp_name'];
+$fileerror=$file['error'];
+$experience=$_POST['years'];
+$email=$_POST['email'];
+$psw=$_POST['psw'];
+if($fileerror==0)
+{
+$destfile='upload/'.$filename;
+move_uploaded_file($filepath,$destfile);
+$Insert="INSERT into serviceproviders
+VALUES('$name','$address','$phone','$department','$destfile','$experience','$email','$psw')";
+if(mysqli_query($con,$Insert)){
+echo "<h1>Service provider successfully inserted</h1>";
+echo "<script>window.location='thank_ser.html'</script>";
+}
+else{
+echo"error:Could not execute $Insert.".mysqli_error($con);
+}
+}
+?>
+sp_home.php :
+<?php
+include_once('connection.php');
+if(isset($_POST['update']))
+{
+$status=$_POST['status'];
+$email=$_POST['email'];
+$query="UPDATE serviceproviders SET status='$status' WHERE email='$email' ";
+mysqli_query($con,$query);
+}
+53
+?>
+<!DOCTYPE html>
+<html>
+<head> <title>SERVICE PROVIDERS</title>
+<style type="text/css">
+body{
+background: url(home2.jpg);
+background-size: cover;
+}
+.table{
+border-collapse:collapse;
+box-shadow: 5px 10px;
+background-color:#E8DAEF ;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body><i>
+<i>
+<div class="box">
+<table style =" font-size:16pt" align="center" width="100%" height="100%" >
+<tr>
+<td style="color:black"><h1 align="center"><b>ONLINE HOME SERVICE
+PROVIDERS</b></td></h1>
+</tr>
+<tr>
+<td style="color:black" align="center"><b>Making homes better!</b><br></td>
+</tr>
+</table>
+</div>
+<form action="sp_home.php" method="post" enctype="multipart/form-data">
+<div class="boxtwo" style="border:solid 1px black;border-radius: 10px; width:74%; height:370px;
+margin-left:13%;margin-top:5px;background-color:white;overflow:scroll;">
+<center>
+<h2>WELCOME</h2></center>
+<p style="margin-left:5%;"><b>Please select your working status:</b><br>
+<input type="radio" id="work" name="status" " value="w">WORKING<br>
+<input type="radio" id="nowork" name="status" value="n" >NOT WORKING<br><br>
+<input type="email" name="email" placeholder="enter the email"></td>
+<button type="submit" name="update" style="color:white;font-size: 20px;font-weight: 10px
+;background:#660000 ;">update</button>
+<h3 style="margin-left:160px" background-color: #eb2e55; ><a href="logout.php">Logout here</a>
+54
+</h3>
+</p>
+</form>
+</div >
+<div class="boxthree" style="background-color:lavender; border:solid 1px black;border-radius: 10px;
+width:73.5%; height:60px; margin-left:13%; margin-top:15px" >
+<h6 style="line-height:1px;font-size:12pt"><center>contact
+us:0891-238989,8985129566</center></h6>
+</div>
+</i>
+</body>
+</i>
+</html>
+style1.css:
+body{
+background: url(home2.jpg);
+background-size: cover;
+}
+.box{
+width:74%;
+height:150px;
+border:solid 1px black;
+background-image: url("img2.jpg");
+background-size: cover;
+margin-left: 13%;
+opacity: .9;
+border-radius:12px;
+}
+.boxtwo{
+background-image: url("img2.jpg");
+background-size: cover;
+border-radius:12px;
+}
+.boxtwo input[type="submit"]
+{
+font-size:25px;
+text-align:center;
+border:none;
+height:40px;
+margin-left:60% ;
+margin-top: 10px;
+background:#660000;
+color:#FFFFFF;
+border-radius:18px;
+}
+.five{
+padding:10px 0px 10px 10px;
+margin-top: 30px;
+margin-left: 25%;
+border-radius:12px;
+</head>
+<style type="text/css">
+body{
+background: url(home2.jpg);
+background-size: cover;
+}
+.box{
+width:74%;
+height:150px;
+border:solid 1px black;
+background-image: url("img2.jpg");
+background-size: cover;
+margin-left: 13%;
+opacity: .9;
+border-radius:12px;
+}
+.boxtwo{
+background-image: url("img2.jpg");
+background-size: cover;
+border-radius:12px;
+}
+</style>
+<body>
+<div class="box">
+<table style =" font-size:16pt" align="center" width="100%" height="100%" >
+<tr>
+<td style="color:black"><h1 align="center"><u>ONLINE HOME SERVICE
+PROVIDERS</u></td></h1>
+</tr>
+<tr>
+<td style="color:black" align="center"><b>Making homes better!</b><br></td>
+</tr>
+</table>
+</div>
+<form method="post" action="">
+<div class="boxtwo" style="border:solid 1px black;border-radius: 10px; width:74%; height:370px;
+margin-left:13%;margin-top:5px;background-color:white">
+<center>
+<h1>Thank You!</h1>
+<h2>Our service provider will contact you soon.</h2></center>
+</div >
+</form>
+<div class="boxthree" style="background-color:lavender; border:solid 1px black;border-radius: 10px;
+width:73.5%; height:60px; margin-left:13%; margin-top:15px" >
+<h6 style="line-height:1px;font-size:12pt"><center>contact
+us:0891-238989,8985129566</center></h6>
+</div>
+</body>
+</html>
+57
+thank_ser.html :
+<!DOCTYPE html>
+<html>
+<head> <title>THANK YOU</title>
+</head>
+<style type="text/css">
+body{
+background: url(home2.jpg);
+background-size: cover;
+}
+.box{
+width:74%;
+height:150px;
+border:solid 1px black;
+background-image: url("img2.jpg");
+background-size: cover;
+margin-left: 13%;
+opacity: .9;
+border-radius:12px;
+}
+.boxtwo{
+background-image: url("img2.jpg");
+background-size: cover;
+border-radius:12px;
+}
+</style>
+<body>
+<div class="box">
+<table style =" font-size:16pt" align="center" width="100%" height="100%" >
+<tr>
+<td style="color:black"><h1 align="center"><u>ONLINE HOME SERVICE
+PROVIDERS</u></td></h1>
+</tr>
+<tr>
+<td style="color:black" align="center"><b>Making homes better!</b><br></td>
+</tr>
+</table>
+</div>
+<form method="post" action="">
+<div class="boxtwo" style="border:solid 1px black;border-radius: 10px; width:74%; height:370px;
+margin-left:13%;margin-top:5px;background-color:white">
+<center>
+<h1>Thank You!</h1>
+<h2>We will contact you soon.</h2></center>
+</div >
+</form>
+<div class="boxthree" style="background-color:lavender; border:solid 1px black;border-radius: 10px;
+width:73.5%; height:60px; margin-left:13%; margin-top:15px" >
+<h6 style="line-height:1px;font-size:12pt"><center>contact
+us:0891-238989,8985129566</center></h6>
+58
+</div>
+</body>
+</html>
+update_sp.php :
+<?php
+include_once('connection.php');
+if(isset($_POST['approve']))
+{
+$email = $_POST['email'];
+$sql="select * from workwithus where (email='$email');";
+$res=mysqli_query($con,$sql);
+$query=mysqli_query($con,"INSERT INTO
+serviceproviders(name1,address,phone,department,profile,years,email,psw)
+SELECT name,address,phone,department,profile,experience,email,psw FROM workwithus WHERE
+email ='$email' ");// copy one table to another
+$sqlq="delete from workwithus where email='$email'";
+$res=mysqli_query($con,$sqlq);
+}
+?>
+<!DOCTYPE html>
+<html>
+<head> <title>UPDATE SERIVCE PROVIDERS</title>
+<style type="text/css">
+body{
+background: url(home2.jpg);
+background-size: cover;
+}
+.table{
+border-collapse:collapse;
+box-shadow: 5px 10px;
+background-color:#E8DAEF ;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<i>
+<div class="box">
+<table style =" font-size:16pt" align="center" width="100%" height="100%" >
+<tr>
+<td style="color:black"><h1 align="center"><b>ONLINE HOME SERVICE
+59
+PROVIDERS</b></td></h1>
+</tr>
+<tr>
+<td style="color:black" align="center"><b>Making homes better!</b><br></td>
+</tr>
+</table>
+</div>
+<div class="boxtwo" style="border:solid 1px black;border-radius: 10px; width:74%; height:500x;
+margin-left:13%;margin-top:5px;background-color:white;overflow:scroll;">
+<center>
+<h1>ACCEPT OR DECLINE SERVICE PROVIDERS</h1></center>
+<table class="table" align="centre" border="1px" style="width:600px;
+line-height:40px;margin-left:20%">
+<tr>
+<th colspan="10"><h2>REQUESTS</h2></th>
+</tr>
+<th> Name </th>
+<th> Address </th>
+<th> Phone no </th>
+<th> Department </th>
+<th> Work Profile</th>
+<th> experience </th>
+<th> Email ID</th>
+<th> Password</th>
+<?php
+$query="SELECT * FROM workwithus ";
+$result=mysqli_query($con,$query);
+while($row=mysqli_fetch_array($result))
+{
+?>
+<tr>
+<td><?php echo $row['name']; ?></td>
+<td><?php echo $row['address']; ?></td>
+<td><?php echo $row['phone']; ?></td>
+<td><?php echo $row['department']; ?></td>
+<td><iframe src="<?php echo $row['profile'];?>" height="200" width="300"></iframe></td>
+<td><?php echo $row['experience']; ?></td>
+<td><?php echo $row['email']; ?></td>
+<td><?php echo $row['psw']; ?></td>
+</tr>
+<?php
+}
+?>
+<form action="update_sp.php" method="post" enctype="multipart/form-data">
+<tr>
+<td><input type="email" name="email" placeholder="enter the email"></td>
+<td><button type="submit" name="approve" style="color:white;font-size: 40px;font-weight: 30px
+;background:#660000 ;">APPROVE</button></td>
+</tr>
+</form>
+</table>
+60
+<br>
+<br>
+<h3 style="margin-left:160px" background-color: #eb2e55; ><a href="logout.php">Logout here</a>
+</h3>
+</div >
+<div class="boxthree" style="background-color:lavender; border:solid 1px black;border-radius: 10px;
+width:73.5%; height:60px; margin-left:13%; margin-top:15px" >
+<h6 style="line-height:1px;font-size:12pt"><center>contact
+us:0891-238989,8985129566</center></h6>
+</div>
+</body>
+</i>
+</html>
+view_bookings.php :
+<?php
+include_once('connection.php');
+if(isset($_POST['search']))
+{
+$email = $_POST['email'];
+}
+?>
+<!DOCTYPE html>
+<html>
+<head> <title>BOOKINGS</title>
+<style type="text/css">
+body{
+background: url(home2.jpg);
+background-size: cover;
+}
+.table{
+border-collapse:collapse;
+box-shadow: 5px 10px;
+background-color:#E8DAEF ;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<i>
+<div class="box">
+61
+<table style =" font-size:16pt" align="center" width="100%" height="100%" >
+<tr>
+<td style="color:black"><h1 align="center"><b>ONLINE HOME SERVICE
+PROVIDERS</b></td></h1>
+</tr>
+<tr>
+<td style="color:black" align="center"><b>Making homes better!</b><br></td>
+</tr>
+</table>
+</div>
+<form method="post" action="">
+<div class="boxtwo" style="border:solid 1px black;border-radius: 10px; width:74%; height:370px;
+margin-left:13%;margin-top:5px;background-color:white;overflow:scroll;">
+<h2> Enter your EMAIL ID to view all your bookings </h2>
+<br>
+<label style="color:blue">E-MAIL ID </label>
+<input type="email" name="email" id="email" placeholder="email" required="true">
+<button type="submit" name="search" style="color:white;background-color:blue;font-size:
+40px;font-weight: 30px;">search</button>
+<br><br>
+<table class="table" align="centre" border="1px" style="width:600px;
+line-height:40px;margin-left:20%">
+<tr>
+<th colspan="5"><h2>YOUR BOOKINGS</h2></th>
+</tr>
+<th> BOOKING ID</th>
+<th> ADDRESS </th>
+<th> PHONE NO </th>
+<th> SERVICE </th>
+<th> PROVIDER </th>
+<?php
+$query="SELECT * FROM reqbookings WHERE (email='$email'); ";
+$result=mysqli_query($con,$query);
+while($row=mysqli_fetch_array($result))
+{
+?>
+<tr>
+<td><?php echo $row['booking_id']; ?></td>
+<td><?php echo $row['address']; ?></td>
+<td><?php echo $row['phone']; ?></td>
+<td><?php echo $row['service']; ?></td>
+<td><?php echo $row['provider']; ?></td>
+</tr>
+<?php
+}
+?>
+</table>
+62
+<h3 style="margin-left:160px" background-color: #eb2e55; ><a href="logout.php">Logout here</a>
+</h3>
+</div >
+</form>
+<div class="boxthree" style="background-color:lavender; border:solid 1px black;border-radius: 10px;
+width:73.5%; height:60px; margin-left:13%; margin-top:15px" >
+<h6 style="line-height:1px;font-size:12pt"><center>contact
+us:0891-238989,8985129566</center></h6>
+</div>
+</i>
+</body>
+</html>
+view_carp.php :
+<?php
+include_once('connection.php');
+?>
+<!DOCTYPE html>
+<html>
+<head> <title>CARPENTRY</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+.table{
+border-collapse:collapse;
+box-shadow: 5px 10px;
+background-color:#E8DAEF ;
+}
+.topnav {
+overflow: hidden;
+background-color: #333;
+}
+63
+.topnav a {
+float: left;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+.topnav a.active {
+background-color: #2980B9;
+color: white;
+</style>
+</head>
+<body><i>
+<div class="box">
+<table style =" font-size:16pt" align="center" width="100%" height="100%" >
+<tr>
+<td style="color:black"><h1 align="center"><b><i>ONLINE HOME SERVICE
+PROVIDERS</b></i></td></h1>
+</tr>
+<tr>
+<td style="color:black" align="center"><b><i>Making homes better!</b><br></td>
+</tr>
+</table>
+</div>
+64
+<form method="post" action="">
+<div class="boxtwo" style="font-family:'Monotype Corsiva';border:solid 1px black;border-radius:
+10px; width:74%; height:370px;
+margin-left:13%;margin-top:5px;background-color:white;overflow:scroll;">
+<div class="topnav">
+<a href="view_clean.php">House keepers</a>
+<a class="active" href="view_carp.php">Carpenters</a>
+<a href="view_plumb.php">Plumbers</a>
+<a href="view_elec.php">Electricians</a>
+<a href="view_req.php">Requests</a>
+</div>
+<br>
+<table class="table" align="centre" border="1px" style="width:600px;
+line-height:40px;margin-left:20%" >
+<tr>
+<th colspan="5" ><h2>our carpenters</h2></th>
+</tr>
+<th> name </th>
+<th> email </th>
+<th> Phone no </th>
+<th> experience </th>
+<th> status </th>
+<?php
+$query="SELECT * FROM serviceproviders where department='cp' and status='n' ";
+$result=mysqli_query($con,$query);
+while($row=mysqli_fetch_array($result))
+{
+?>
+<tr>
+65
+<td ><?php echo $row['name1']; ?></td>
+<td><?php echo $row['email']; ?></td>
+<td><?php echo $row['phone']; ?></td>
+<td><?php echo $row['years']; ?></td>
+<td><?php echo $row['status']; ?></td>
+</tr>
+<?php
+}
+?>
+</table><br><br>
+<h3 style="margin-left:160px" background-color: #eb2e55; ><a href="logout.php">Logout here</a>
+</h3>
+</div>
+</table><br><br>
+</div >
+</form>
+<div class="boxthree" style="background-color:lavender; border:solid 1px black;border-radius: 10px;
+width:73.5%; height:60px; margin-left:13%; margin-top:15px" >
+<h6 style="line-height:1px;font-size:12pt"><center>contact
+us:0891-238989,8985129566</center></h6>
+</div>
+</i>
+</body>
+</html>
+view_clean.php :
+<?php
+include_once('connection.php');
+?>
+<!DOCTYPE html>
+<html>
+<head> <title>HOUSEKEEPING</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+6
+6 .table{ border-collapse:collapse; box-shadow: 5px 10px; background-color:#E8DAEF ; }.topnav { overflow: hidden; background-color: #333; }.topnav a { float: left; color: #f2f2f2; text-align: center; padding: 14px 16px; text-decoration: none; font-size: 17px; }.topnav a:hover { background-color: #ddd; color: black; }.topnav a.active { background-color: #2980B9; color: white; </style> </head> <body><i> <div class="box">
+67
+<table style =" font-size:16pt" align="center" width="100%" height="100%" >
+<tr>
+<td style="color:black"><h1 align="center"><b><i>ONLINE HOME SERVICE
+PROVIDERS</b></i></td></h1>
+</tr>
+<tr>
+<td style="color:black" align="center"><b><i>Making homes better!</b><br></td>
+</tr>
+</table>
+</div>
+<form method="post" action="">
+<div class="boxtwo" style="font-family:'Monotype Corsiva';border:solid 1px black;border-radius:
+10px; width:74%; height:370px;
+margin-left:13%;margin-top:5px;background-color:white;overflow:scroll;">
+<div class="topnav">
+<a class="active" href="view_clean.php">House keepers</a>
+<a href="view_carp.php">Carpenters</a>
+<a href="view_plumb.php">Plumbers</a>
+<a href="view_elec.php">Electricians</a>
+<a href="view_req.php">Requests</a>
+</div>
+<br>
+<table class="table" align="centre" border="1px" style="width:600px;
+line-height:40px;margin-left:20%" >
+<tr>
+<th colspan="5" ><h2>Our house keepers</h2></th>
+</tr>
+<th> name </th>
+<th> email </th>
+<th> Phone no </th>
+68
+<th> experience </th>
+<th> status</th>
+<?php
+$query="SELECT * FROM serviceproviders where department='hk' and status='n' ";
+$result=mysqli_query($con,$query);
+while($row=mysqli_fetch_array($result))
+{
+?>
+<tr>
+<td ><?php echo $row['name1']; ?></td>
+<td><?php echo $row['email']; ?></td>
+<td><?php echo $row['phone']; ?></td>
+<td><?php echo $row['years']; ?></td>
+<td><?php echo $row['status']; ?></td>
+</tr>
+<?php
+}
+?>
+</table><br><br>
+<h3 style="margin-left:160px" background-color: #eb2e55; ><a href="logout.php">Logout here</a>
+</h3>
+</div>
+</table><br><br>
+</div >
+</form>
+<div class="boxthree" style="background-color:lavender; border:solid 1px black;border-radius: 10px;
+width:73.5%; height:60px; margin-left:13%; margin-top:15px" >
+<h6 style="line-height:1px;font-size:12pt"><center>contact
+us:0891-238989,8985129566</center></h6>
+</div>
+</i>
+</body>
+</html>
+69
+view_elec.php :
+<?php
+include_once('connection.php');
+?>
+<!DOCTYPE html>
+<html>
+<head> <title>PLUMBING</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+.table{
+border-collapse:collapse;
+box-shadow: 5px 10px;
+background-color:#E8DAEF ;
+}
+.topnav {
+overflow: hidden;
+background-color: #333;
+}
+.topnav a {
+float: left;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+70
+}
+.topnav a.active {
+background-color: #2980B9;
+color: white;
+</style>
+</head>
+<body><i>
+<div class="box">
+<table style =" font-size:16pt" align="center" width="100%" height="100%" >
+<tr>
+<td style="color:black"><h1 align="center"><b><i>ONLINE HOME SERVICE
+PROVIDERS</b></i></td></h1>
+</tr>
+<tr>
+<td style="color:black" align="center"><b><i>Making homes better!</b><br></td>
+</tr>
+</table>
+</div>
+<form method="post" action="">
+<div class="boxtwo" style="font-family:'Monotype Corsiva';border:solid 1px black;border-radius:
+10px; width:74%; height:370px;
+margin-left:13%;margin-top:5px;background-color:white;overflow:scroll;">
+<div class="topnav">
+<a href="view_clean.php">Housekeepers</a>
+<a href="view_carp.php">Carpenters</a>
+<a href="view_plumb.php">plumbers</a>
+<a class="active"href="view_elec.php">Electricians</a>
+<a href="view_req.php">Requests</a>
+</div>
+<br>
+71
+<table class="table" align="centre" border="1px" style="width:600px;
+line-height:40px;margin-left:20%" >
+<tr>
+<th colspan="5" ><h2>our electricians</h2></th>
+</tr>
+<th> name </th>
+<th> email </th>
+<th> Phone no </th>
+<th> experience </th>
+<th> status </th>
+<?php
+$query="SELECT * FROM serviceproviders where department='el' and status='n' ";
+$result=mysqli_query($con,$query);
+while($row=mysqli_fetch_array($result))
+{
+?>
+<tr>
+<td ><?php echo $row['name1']; ?></td>
+<td><?php echo $row['email']; ?></td>
+<td><?php echo $row['phone']; ?></td>
+<td><?php echo $row['years']; ?></td>
+<td><?php echo $row['status']; ?></td>
+</tr>
+<?php
+}
+?>
+</table><br><br>
+<h3 style="margin-left:160px" background-color: #eb2e55; ><a href="logout.php">Logout here</a>
+</h3>
+</div>
+</table><br><br>
+72
+</div >
+</form>
+<div class="boxthree" style="background-color:lavender; border:solid 1px black;border-radius: 10px;
+width:73.5%; height:60px; margin-left:13%; margin-top:15px" >
+<h6 style="line-height:1px;font-size:12pt"><center>contact
+us:0891-238989,8985129566</center></h6>
+</div>
+</i>
+</body>
+</html>
+view_feedback.php :
+<?php
+include_once('connection.php');
+?>
+<!DOCTYPE html>
+<html>
+<head> <title>FEEDBACK OF CUSTOMERS</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+.table{
+border-collapse:collapse;
+box-shadow: 5px 10px;
+background-color:#E8DAEF ;
+}
+.topnav {
+overflow: hidden;
+background-color: #333;
+}
+.topnav a {
+float: left;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+.topnav a.active {
+background-color: #2980B9;
+color: white;
+</style>
+</head>
+<body><i>
+<div class="box">
+73
+<table style =" font-size:16pt" align="center" width="100%" height="100%" >
+<tr>
+<td style="color:black"><h1 align="center"><b><i>ONLINE HOME SERVICE
+PROVIDERS</b></i></td></h1>
+</tr>
+<tr>
+<td style="color:black" align="center"><b><i>Making homes better!</b><br></td>
+</tr>
+</table>
+</div>
+<form method="post" action="">
+<div class="boxtwo" style="font-family:'Monotype Corsiva';border:solid 1px black;border-radius:
+10px; width:74%; height:370px;
+margin-left:13%;margin-top:5px;background-color:white;overflow:scroll;">
+<br>
+<table class="table" align="centre" border="1px" style="width:600px;
+line-height:40px;margin-left:20%" >
+<tr>
+<th colspan="5" ><h2>FEEDBACK OF CUSTOMERS</h2></th>
+</tr>
+<?php
+$query="SELECT * FROM feedback " ;
+$result=mysqli_query($con,$query);
+while($row=mysqli_fetch_array($result))
+{
+?>
+<tr>
+<td ><?php echo $row['review']; ?></td>
+</tr>
+<?php
+}
+?>
+</table><br><br>
+</div>
+</table><br><br>
+</div >
+</form>
+<div class="boxthree" style="background-color:lavender; border:solid 1px black;border-radius: 10px;
+width:73.5%; height:60px; margin-left:13%; margin-top:15px" >
+<h6 style="line-height:1px;font-size:12pt"><center>contact
+us:0891-238989,8985129566</center></h6>
+</div>
+</i>
+</body>
+</html>
+74
+view_plumb.php :
+<?php
+include_once('connection.php');
+?>
+<!DOCTYPE html>
+<html>
+<head> <title>PLUMBING</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+.table{
+border-collapse:collapse;
+box-shadow: 5px 10px;
+background-color:#E8DAEF ;
+}
+.topnav {
+overflow: hidden;
+background-color: #333;
+}
+.topnav a {
+float: left;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+.topnav a.active {
+background-color: #2980B9;
+color: white;
+</style>
+</head>
+<body><i>
+<div class="box">
+<table style =" font-size:16pt" align="center" width="100%" height="100%" >
+<tr>
+<td style="color:black"><h1 align="center"><b><i>ONLINE HOME SERVICE
+PROVIDERS</b></i></td></h1>
+</tr>
+<tr>
+<td style="color:black" align="center"><b><i>Making homes better!</b><br></td>
+</tr>
+</table>
+</div>
+<form method="post" action="">
+<div class="boxtwo" style="font-family:'Monotype Corsiva';border:solid 1px black;border-radius:
+10px; width:74%; height:370px;
+margin-left:13%;margin-top:5px;background-color:white;overflow:scroll;">
+<div class="topnav">
+<a href="view_clean.php">Housekeepers</a>
+<a href="view_carp.php">Carpenters</a>
+<a class="active" href="view_plumb.php">Plumbers</a>
+<a href="view_elec.php">Electricians</a>
+<a href="view_req.php">Requests</a>
+</div><br>
+76
+<table class="table" align="centre" border="1px" style="width:600px;
+line-height:40px;margin-left:20%" >
+<tr>
+<th colspan="5" ><h2>our plumbers</h2></th>
+</tr>
+<th> name </th>
+<th> email </th>
+<th> Phone no </th>
+<th> experience </th>
+<th> status</th>
+<?php
+$query="SELECT * FROM serviceproviders where department='pl' and status='n' ";
+$result=mysqli_query($con,$query);
+while($row=mysqli_fetch_array($result))
+{
+?>
+<tr>
+<td ><?php echo $row['name1']; ?></td>
+<td><?php echo $row['email']; ?></td>
+<td><?php echo $row['phone']; ?></td>
+<td><?php echo $row['years']; ?></td>
+<td><?php echo $row['status']; ?></td>
+</tr>
+<?php
+}
+?>
+</table><br><br>
+<h3 style="margin-left:160px" background-color: #eb2e55; ><a href="logout.php">Logout here</a>
+</h3>
+</div>
+</table><br><br>
+</div >
+</form>
+<div class="boxthree" style="background-color:lavender; border:solid 1px black;border-radius: 10px;
+width:73.5%; height:60px; margin-left:13%; margin-top:15px" >
+<h6 style="line-height:1px;font-size:12pt"><center>contact
+us:0891-238989,8985129566</center></h6>
+77
+</div></i>
+</body>
+</html>
+view_req.php :
+<?php
+include_once('connection.php');
+if(isset($_POST['assign']))
+{
+$status=$_POST['booking_id'];
+$email=$_POST['email'];
+$query="UPDATE reqbookings SET provider='$email' WHERE booking_id='$status' ";
+$quer="UPDATE serviceproviders SET status='w' WHERE email='$email' ";
+mysqli_query($con,$query);
+mysqli_query($con,$quer);
+}
+?>
+<!DOCTYPE html>
+<html>
+<head> <title>VIEW REQUESTS</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+.table{
+border-collapse:collapse;
+box-shadow: 5px 10px;
+background-color:#E8DAEF ;
+}
+.topnav {
+overflow: hidden;
+background-color: #333;
+}
+.topnav a {
+float: left;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+.topnav a.active {
+background-color: #2980B9;
+color: white;
+</style>
+</head>
+78
+<body><i>
+<div class="box">
+<table style =" font-size:16pt" align="center" width="100%" height="100%" >
+<tr>
+<td style="color:black"><h1 align="center"><b><i>ONLINE HOME SERVICE
+PROVIDERS</b></i></td></h1>
+</tr>
+<tr>
+<td style="color:black" align="center"><b><i>Making homes better!</b><br></td>
+</tr>
+</table>
+</div>
+<form method="post" action="">
+<div class="boxtwo" style="font-family:'Monotype Corsiva';border:solid 1px black;border-radius:
+10px; width:74%; height:550px;
+margin-left:13%;margin-top:5px;background-color:white;overflow:scroll;">
+<div class="topnav">
+<a href="view_clean.php">Housekeepers</a>
+<a href="view_carp.php">Carpenters</a>
+<a href="view_plumb.php">Plumbers</a>
+<a href="view_elec.php">Electricians</a>
+<a class="active" href="view_req.php">Requests</a>
+</div>
+<br>
+<table class="table" align="centre" border="1px" style="width:600px;
+line-height:40px;margin-left:20%" >
+<tr>
+<th colspan="5" ><h2>BOOKING REQUESTS</h2></th>
+</tr>
+<th> BOOKING ID </th>
+<th> SERVICE </th>
+<th> ADDRESS </th>
+<th> EMAIL ID </th>
+<th> PHONE NO</th>
+<?php
+$query="SELECT * FROM reqbookings where provider=' ' ";
+$result=mysqli_query($con,$query);
+while($row=mysqli_fetch_array($result))
+{
+?>
+<tr>
+<td ><?php echo $row['booking_id']; ?></td>
+<td><?php echo $row['service']; ?></td>
+<td><?php echo $row['address']; ?></td>
+<td><?php echo $row['email']; ?></td>
+<td><?php echo $row['phone']; ?></td>
+</tr>
+<?php
+}
+?>
+</table><br><br>
+<p style="margin-left:5%";<label><b>BOOKING_ID: </b></label>&emsp;&emsp;&ensp;
+<input type="number" name="booking_id" placeholder="enter the booking ID "></td> <br><br>
+79
+<label><b>PROVIDER EMAIL: </b> </label>
+<input type="email" name="email" placeholder="enter the email of service provider"></td><br><br>
+<button type="submit" name="assign" style="color:white;font-size: 20px;font-weight: 10px
+;background:#660000 ;">ASSIGN</button>
+</p>
+<h3 style="margin-left:160px" background-color: #eb2e55; ><a href="logout.php">Logout here</a>
+</h3>
+</div>
+</table><br><br>
+</div >
+</form>
+<div class="boxthree" style="background-color:lavender; border:solid 1px black;border-radius: 10px;
+width:73.5%; height:60px; margin-left:13%; margin-top:15px" >
+<h6 style="line-height:1px;font-size:12pt"><center>contact
+us:0891-238989,8985129566</center></h6>
+</div>
+</i>
+</body>
+</html>
+workwithus.html :
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+body{
+background: url(home2.jpg);
+background-size: cover;
+}
+.box{
+width:74%;
+height:150px;
+border:solid 1px black;
+background-image: url("img2.jpg");
+background-size: cover;
+margin-left: 13%;
+opacity: .9;
+border-radius:12px;
+}
+.title h2{
+background:#660000;
+border:none;
+margin-left:-10px;
+margin-top: -05px;
+padding-top:3px;
+padding-bottom: 2px;
+padding-left:120px;
+80
+border-radius:15px;
+width:77.2%;
+color:white;
+}
+.one{
+margin-top: 1.5%;
+margin-left:15%;
+margin-right:30%;
+opacity: .9;
+height:320px;
+background:rgba(0,0,0,0.5);
+}
+.boxtwo{
+background-image: url("img2.jpg");
+background-size: cover;
+border-radius:12px;
+}
+.boxtwo input[type="submit"]
+{
+font-size:25px;
+text-align:center;
+border:none;
+height:40px;
+margin-left:60% ;
+margin-top: 10px;
+background:#660000;
+color:#FFFFFF;
+border-radius:18px;
+}
+.center {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left:150% ;
+}
+</style>
+<head><title>WORK WITH US</title></head>
+<body><i>
+<div class="box">
+<table style =" font-size:16pt" align="center" width="100%" height="100%" >
+<tr>
+<td style="color:black"><h1 align="center"><u>ONLINE HOME SERVICE
+PROVIDERS</u></td></h1>
+</tr>
+<tr>
+<td style="color:black" align="center"><b>Making homes better!</b><br></td>
+</tr>
+</table>
+</div>
+<div class="boxtwo" style="border:solid 1px black;border-radius: 10px; width:74%; height:480px;
+margin-left:13%;margin-top:10px;background-color:black">
+<fieldset align="center" style=" border-radius:10px;
+background:rgba(0,0,0,0.38);color:black;height:430px;" class="one">
+<div class="title">
+<h2 style="color:white;text-align:center;padding-top:1px;padding-bottom:
+1px;background:#660000;border-radius:10px;margin-top:-7px;margin-left:-5px;height:30px;width:500p
+x;">YOUR DETAILS</h2>
+</div>
+<form name="f2" action="workwithusconn.php" method="post" enctype="multipart/form-data">
+<table align="center" style="color:black;font-size:13pt;">
+<tr>
+<td>NAME:</td>
+<td ><input type="text" required="required" name="name1" id="name1"/></td>
+</tr>
+<tr>
+<td>ADDRESS:<br /></td>
+<td><input type="text" name = "description" id="description" required="required"></textarea></td>
+</tr>
+<tr>
+<td>GENDER:</td>
+<td>
+<input type="radio" name="gender" id="male" value="m"> Male
+<input type="radio" name="gender" id="female" value="f"> Female</td>
+</tr>
+<tr>
+<td>PHONE NO:</td>
+<td><input type="number" id="phone" name="phone" pattern="[0-9]{10}" required="required"></td>
+</tr>
+<tr>
+<td>DEPARTMENT:</td>
+<td><select required name="department" id="department">
+<option value="pl">Plumbing</option>
+<option value="hk">House keeping</option>
+<option value="cp">carpenter</option>
+<option value="el">Electrician</option>
+</select></td>
+</tr>
+<tr>
+<td>UPLOAD WORK PROFILE:</td>
+<td><input type="file" name="myfile" ></td>
+</tr>
+<tr>
+<td>YEARS OF EXPERIENCE:</td>
+<td> <select required name="years" id="years">
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></td>
+</tr>
+<tr>
+<td>E-MAIL ID:</td>
+<td><input type="email" name="email" id="email" required="required" /></td>
+</tr>
+<tr>
+<td>PASSWORD:</td>
+<td><input type="password" id="psw" name="psw" required>
+</td></tr>
+<tr>
+<td>
+<form action="thank_ser.html">
+<div class="center"><input type="submit" name="WORK WITH US" value="WORK WITH US"
+class="button" ></td></div>
+</form>
+</tr>
+</table>
+</form>
+</fieldset>
+</div>
+<div class="boxthree" style="background-color:lavender; border:solid 1px black;border-radius: 10px;
+width:74%; height:60px; margin-left:13%; margin-top:15px" >
+<h6 style="line-height:1px;font-size:12pt"><center>contact
+us:0891-238989,8985129566</center></h6>
+</div>
+</i>
+</body>
+</html>
+workwithusconn.php :
+<?php
+include_once('connection.php');
+$name=$_POST['name1'];
+$address=$_POST['description'];
+$gender=$_POST['gender'];
+$phone=$_POST['phone'];
+$department=$_POST['department'];
+$file = $_FILES['myfile'];
+$filename=$file['name'];
+$filepath=$file['tmp_name'];
+$fileerror=$file['error'];
+$experience=$_POST['years'];
+$email=$_POST['email'];
+$psw=$_POST['psw'];
+if($fileerror==0)
+{
+$destfile='upload/'.$filename;
+move_uploaded_file($filepath,$destfile);
+$Insert="INSERT into workwithus
+VALUES('$name','$address','$gender','$phone','$department','$destfile','$experience','$email','$psw')";
+if(mysqli_query($con,$Insert)){
+echo "<h1>Service provider successfully inserted</h1>";
+echo "<script>window.location='thank_ser.html'</script>";
+}
+else{
+echo"error:Could not execute $Insert.".mysqli_error($con);
+}
+}
+?
